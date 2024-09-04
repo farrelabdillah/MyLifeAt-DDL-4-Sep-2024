@@ -6,6 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome</title>
     <link rel="stylesheet" href="css/splashstyle.css">
+    <style>
+        /* Splash screen fade-out animation */
+        .splash-container {
+            opacity: 1;
+            transition: opacity 2s ease-in-out; /* Fade-out transition */
+        }
+
+        .fade-out {
+            opacity: 0;
+        }
+    </style>
 </head>
 <body>
     <div class="splash-container">
@@ -14,10 +25,14 @@
     </div>
 
     <script>
-        // Redirect to login page after 2 seconds
+        // Start the fade-out effect
+        setTimeout(function() {
+            document.querySelector('.splash-container').classList.add('fade-out');
+        }, 1000); 
+        // Redirect to login page 
         setTimeout(function() {
             window.location.href = 'login.html';
-        }, 2000);
+        }, 3000); // 
     </script>
 </body>
 </html>
