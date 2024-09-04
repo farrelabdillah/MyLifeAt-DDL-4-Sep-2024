@@ -64,6 +64,7 @@ input, textarea {
 }
 
 #logout-button:hover {
+    transition: 0.3s;
     background-color: #c82333; 
     color: white; 
 }
@@ -82,6 +83,7 @@ button {
 }
 
 button:hover {
+    transition: 0.3s;
     background-color: #218838;
     color: white;
 }
@@ -115,6 +117,12 @@ li {
     margin-bottom: 1em;
     font-size: 1rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    scale: 0.9;
+    transition: transform .2s;
+}
+
+li:hover{
+    transform: scale(1.1);
 }
 
 .todo-title {
