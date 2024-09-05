@@ -7,10 +7,15 @@ document.getElementById('login-form').addEventListener('submit', function(event)
 
     if (username && password) {
         localStorage.setItem('username', username);
-        localStorage.setItem('password', password); 
+        localStorage.setItem('password', password);
 
-        // Redirect to the home screen
-        window.location.href = 'home.html';
+        // Add fade-out effect to the login screen
+        document.body.classList.add('fade-out');
+
+        // Redirect to the home screen after the fade-out effect completes
+        setTimeout(function() {
+            window.location.href = 'home.html';
+        }, 1000); 
     } else {
         alert('Please enter both username and password.');
     }

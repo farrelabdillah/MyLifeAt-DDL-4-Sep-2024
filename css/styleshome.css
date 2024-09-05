@@ -1,158 +1,257 @@
 /* General styles */
 body {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    background-color: #402C25;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #402c25;
+
+  /* background image */
+  background-image: url("../images/tavernbg.png"); /* Correct path to your image */
+  background-size: cover; /* Ensure the image covers the entire page */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Flexbox container for input form on the left and todo list on the right */
 .home-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 2em;
-    max-width: 1000px;
-    margin: 0 auto;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 3em;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
 }
 
 /* Left side input box styling */
 .input-container {
-    background-color: #2C1C17;
-    padding: 2em;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 45%;
-    text-align: center;
-    margin-right: 2em;
+  background-color: rgba(44, 28, 23, 0.8); /* turunin opacity */
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
+  width: 45%;
+  text-align: center;
+  margin-right: 2em;
+  margin-left: 2em;
+  max-height: 75vh;
+  overflow-y: auto;
 }
 
-h2, h1 {
-    font-family: 'Cinzel', serif;
-    font-weight: 700;
-    margin-bottom: 1.5em;
-    color: #FCEFB9;
+h1 {
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+  margin-bottom: 2.5em;
+  color: #fcefb9;
 }
 
-input, textarea {
-    display: block;
-    width: 100%;
-    padding: 12px;
-    margin: 15px 0;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 1rem;
-    box-sizing: border-box;
+h2 {
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  color: #fcefb9;
+}
+
+/* welcome text and username */
+#welcome-message {
+  font-size: 1.8rem;
+  color: #fcefb9;
+  text-align: center;
+  line-height: 0.5em;
+}
+
+.welcome-text {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.username-text {
+  font-size: 1rem;
+  word-wrap: break-word;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin: 15px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-bottom: 1.5em;
+  box-sizing: border-box;
+}
+
+#add-todo-button {
+  margin-top: 0em;
+  margin-bottom: 4.5em;
 }
 
 #logout-button {
-    background-color: #e4dcb9;
-    color: black; 
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: 600;
-    margin-top: 10px;
+  background-color: #e4dcb9;
+  color: black;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 10px;
 }
 
 #logout-button:hover {
-    transition: 0.3s;
-    background-color: #c82333; 
-    color: white; 
+  transition: 0.3s;
+  background-color: #c82333;
+  color: white;
 }
 
 button {
-    width: 100%;
-    padding: 12px;
-    background-color: #e4dcb9;
-    color: black;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: 600;
-    margin-top: 10px;
+  width: 100%;
+  padding: 12px;
+  background-color: #e4dcb9;
+  color: black;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 10px;
 }
 
 button:hover {
-    transition: 0.3s;
-    background-color: #218838;
-    color: white;
+  transition: 0.3s;
+  background-color: #218838;
+  color: white;
 }
-
 
 /* Right side todo list styling */
 .todo-list-container {
-    background-color: #2C1C17;
-    padding: 1em;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    text-align: left;
-    max-height: 515px; 
-    overflow-y: auto;
-    margin-left: 2em;
+  background-color: rgba(44, 28, 23, 0.8); /* turunin opacity */
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
+  width: 80%;
+  text-align: left;
+  margin-left: 2em;
+  margin-right: 2em;
+  max-height: 75vh;
+  overflow-y: auto;
 }
 
 /* Todo list styling */
 ul {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 1.5em;
+  list-style-type: none;
+  padding: 0;
+  margin-top: 1em;
 }
 
 li {
-    background-color: #FCEFB9;
-    color: #2C1C17;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 1em;
-    font-size: 1rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-height: 14rem; 
-    overflow-y: auto; 
-    overflow-x: hidden; 
-    scale: 0.9;
-    transition: transform .2s;
+  background-color: #fcefb9;
+  color: #2c1c17;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 1em;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-height: 16rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scale: 0.9;
+  transition: transform 0.2s;
 }
 
-li:hover{
-    transform: scale(1.1);
+li:hover {
+  transform: scale(1.1);
 }
 
 .todo-title {
-    font-weight: 700;
-    text-decoration: underline;
-    font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: underline;
+  font-size: 1.1rem;
 }
 
 .todo-description {
-    margin-top: 5px;
-    font-size: 1rem;
-    max-height: 10rem; 
-    overflow-y: auto; 
-    overflow-x: hidden; 
-    word-wrap: break-word; 
-    line-height: 1.5rem; 
+  margin-top: 5px;
+  font-size: 1rem;
+  max-height: 10rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  word-wrap: break-word;
+  line-height: 1.5rem;
+  padding-right: 8px;
+}
+
+.todo-date,
+.todo-time {
+  font-size: 0.9rem;
+  margin-top: 5px;
+  color: #555;
+}
+
+/* scrollbar customization (input container) */
+.input-container::-webkit-scrollbar {
+  width: 0px;
+}
+
+.input-container::-webkit-scrollbar-thumb {
+  background-color: rgba(44, 28, 23, 0.1);
+  border-radius: 0px;
+}
+
+/* scrollbar customization (todolist) */
+.todo-list-container::-webkit-scrollbar,
+.todo-description::-webkit-scrollbar {
+  width: 4px;
+}
+
+.todo-description::-webkit-scrollbar-thumb {
+  background-color: rgba(44, 28, 23, 0.3);
+  border-radius: 10px;
+}
+
+/* audio display setting */
+audio {
+  display: none;
+}
+
+/* Fade-in effect for the home screen */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .home-wrapper {
-        flex-direction: column;
-        align-items: center;
-    }
+  .home-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .input-container, .todo-list-container {
-        width: 100%;
-        margin-bottom: 2em;
-    }
+  .input-container,
+  .todo-list-container {
+    width: 100%;
+    margin-bottom: 2em;
+    max-height: auto;
+  }
 }

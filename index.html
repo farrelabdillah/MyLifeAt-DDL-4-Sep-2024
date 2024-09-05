@@ -1,38 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"><!--montserrat font-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!--montserrat font-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Welcome</title>
-    <link rel="stylesheet" href="css/splashstyle.css">
-    <style>
-        /* Splash screen fade-out animation */
-        .splash-container {
-            opacity: 1;
-            transition: opacity 2s ease-in-out; /* Fade-out transition */
-        }
-
-        .fade-out {
-            opacity: 0;
-        }
-    </style>
-</head>
-<body>
+    <link rel="stylesheet" href="css/splashstyle.css" />
+  </head>
+  <body>
     <div class="splash-container">
-        <h1>Start your day with</h1>
-        <img src="images/splashscreen.jpg" alt="Splash Image" class="splash-image">
+      <h1>Start your day with</h1>
+      <img
+        src="images/splashscreen.jpg"
+        alt="Splash Image"
+        class="splash-image"
+      />
     </div>
 
     <script>
-        // Start the fade-out effect
-        setTimeout(function() {
-            document.querySelector('.splash-container').classList.add('fade-out');
-        }, 1000); 
-        // Redirect to login page 
-        setTimeout(function() {
-            window.location.href = 'login.html';
-        }, 3000); // 
+      // Start the fade-out effect
+      setTimeout(function () {
+        document.querySelector(".splash-container").classList.add("fade-out");
+      }, 1000);
+      // Redirect to login page
+      setTimeout(function () {
+        window.location.href = "login.html";
+      }, 3000); //
     </script>
-</body>
+  </body>
 </html>

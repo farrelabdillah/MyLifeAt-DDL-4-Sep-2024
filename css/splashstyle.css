@@ -1,28 +1,36 @@
 /* Splash screen styling */
 body {
-    background-color: #402C25;
+  background-color: #402c25;
 }
 
 .splash-container {
-    font-family: 'Montserrat', sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-    background-color: #402C25; 
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background-color: #402c25;
+
+  /* buat fade out */
+  opacity: 1;
+  transition: opacity 2s ease-in-out;
+}
+
+.fade-out {
+  opacity: 0;
 }
 
 .splash-container h1 {
-    font-family: 'Cinzel', serif;
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #FCEFB9;
+  font-family: "Cinzel", serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fcefb9;
 }
 
 .splash-image {
-    width: 400px;
-    height: auto;
-    border-radius: 8px;
+  width: 400px;
+  height: auto;
+  border-radius: 8px;
 }

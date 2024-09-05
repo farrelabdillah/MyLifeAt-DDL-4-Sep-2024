@@ -1,33 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet"><!--cinzel font-->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"><!--montserrat font-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!--cinzel font-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!--montserrat font-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <link rel="stylesheet" href="css/styleshome.css">
-</head>
-<body>
-    <div class="home-wrapper"> <!-- Flex wrapper for the two sections -->
-        <div class="input-container">
-            <h1 id="welcome-message"></h1>
-            <h2>Enter your list</h2>
+    <link rel="stylesheet" href="css/styleshome.css" />
+  </head>
+  <body>
+    <div class="home-wrapper">
+      <div class="input-container">
+        <h1 id="welcome-message">
+          <span class="welcome-text">Welcome,</span>
+          <span class="username-text"></span>
+        </h1>
+        <h2>Enter your list</h2>
 
-            <!-- Input for Todo Title -->
-            <input type="text" id="new-todo-title" placeholder="Title" required>
-            <!-- Input for Todo Description -->
-            <textarea id="new-todo-description" placeholder="Description" rows="3"></textarea>
+        <!-- Input for Todo Title -->
+        <input type="text" id="todo-title" placeholder="Title" required />
+        <!-- Input for Todo Description -->
+        <textarea
+          id="todo-description"
+          placeholder="Description"
+          rows="3"
+          required
+        ></textarea>
 
-            <button id="add-todo-button">Add Todo</button>
-            <button id="logout-button">Logout</button>
-        </div>
+        <button id="add-todo-button">Add ToDo</button>
+        <button id="logout-button">Logout</button>
+      </div>
 
-        <div class="todo-list-container">
-            <ul id="todo-list"></ul> <!-- Where the todos will be displayed -->
-        </div>
+      <div class="todo-list-container">
+        <ul id="todo-list"></ul>
+        <!-- Where the todos will be displayed -->
+      </div>
+
+      <!-- ngeplay lagu wkwkwk -->
+      <audio autoplay loop>
+        <source src="audio/videoplayback.mp3" type="audio/mpeg" />
+      </audio>
     </div>
 
     <script src="js/home.js"></script>
-</body>
+  </body>
 </html>
