@@ -4,7 +4,7 @@ body {
 }
 
 .splash-container {
-  font-family: "Montserrat", sans-serif;
+  font-family: "MedievalSharp", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,7 +23,7 @@ body {
 }
 
 .splash-container h1 {
-  font-family: "Cinzel", serif;
+  font-family: "MedievalSharp", serif;
   font-size: 2rem;
   margin-bottom: 20px;
   color: #fcefb9;

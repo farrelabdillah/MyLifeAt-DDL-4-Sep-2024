@@ -2,15 +2,11 @@
 <html lang="en">
   <head>
     <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap"
+      link
+      href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap"
       rel="stylesheet"
     />
-    <!--cinzel font-->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <!--montserrat font-->
+    <!--MedievalSharp Font font-->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
@@ -32,31 +28,6 @@
       </form>
     </div>
 
-    <script>
-      // JavaScript-based fade-in function
-      function fadeIn(element, duration) {
-        let opacity = 0;
-        element.style.opacity = opacity;
-
-        const interval = 50;
-        const increment = interval / duration;
-
-        const fade = setInterval(function () {
-          opacity += increment;
-          if (opacity >= 1) {
-            clearInterval(fade);
-            opacity = 1;
-          }
-          element.style.opacity = opacity;
-        }, interval);
-      }
-      // Run the fade-in effect after the page loads
-      window.onload = function () {
-        const loginContainer = document.querySelector(".login-container");
-        fadeIn(loginContainer, 2000);
-      };
-    </script>
-
-    <script src="js/app.js"></script>
+    <script src="js/login.js"></script>
   </body>
 </html>
